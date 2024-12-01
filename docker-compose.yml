@@ -1,0 +1,9 @@
+version: '3'
+services:
+  app:
+    image: your-dockerhub-username/rest:latest
+    restart: unless-stopped
+    env_file:
+      - rest-env
+    ports:
+      - "3000:3000"
