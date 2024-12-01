@@ -3,8 +3,15 @@ import { BadRequest } from '../utils/Errors'
 
 class RatsService {
   async getRats() {
-    const rats = await dbContext.Rats.find()
-    return rats
+    try {
+      console.log('Attempting to get rats...')
+      const rats = await dbContext.Rats.find()
+      console.log('Found rats:', rats)
+      return rats
+    } catch (error) {
+      console.error('Error in getRats:', error)
+      throw error
+    }
   }
 
   async getRatById(ratId) {
