@@ -3,7 +3,7 @@ import { ratsService } from "../services/RatsService";
 
 export class RatsController extends BaseController {
   constructor() {
-    super('api/rats')
+    super('api/Rats')
     this.router
       .get('', this.getRats)
       .get('/:ratId', this.getRatById)
