@@ -6,7 +6,7 @@ class LocationsService {
   async getLocations() {
     const locations = await dbContext.Locations.find()
     return locations
-  } a
+  }
 
   async getLocationById(locationId) {
     try {
